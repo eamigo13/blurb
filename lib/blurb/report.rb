@@ -38,11 +38,7 @@ module Blurb
     def self.get_default_metrics(record_type, campaign_type)
       if campaign_type == SPONSORED_BRANDS
         return [
-          "campaignName",
           "campaignId",
-          "campaignStatus",
-          "campaignBudget",
-          "campaignBudgetType",
           "impressions",
           "clicks",
           "cost",
@@ -53,12 +49,7 @@ module Blurb
         ].join(",") if record_type == CAMPAIGNS
         return [
           "adGroupId",
-          "adGroupName",
-          "campaignName",
           "campaignId",
-          "campaignStatus",
-          "campaignBudget",
-          "campaignBudgetType",
           "impressions",
           "clicks",
           "cost",
@@ -69,20 +60,13 @@ module Blurb
         ].join(",") if record_type == AD_GROUPS
         return [
           "keywordId",
-          "keywordStatus",
-          "keywordBid",
           "keywordText",
           "matchType",
           "adGroupId",
-          "adGroupName",
-          "campaignName",
           "campaignId",
-          "campaignStatus",
-          "campaignBudget",
-          "campaignBudgetType",
           "impressions",
           "clicks",
-          "cost",
+          "cost", 
           "attributedSales14d",
           "attributedSales14dSameSKU",
           "attributedConversions14d",
@@ -90,7 +74,6 @@ module Blurb
         ].join(",") if record_type == KEYWORDS
       elsif campaign_type == SPONSORED_PRODUCTS
         return [
-          "bidPlus",
           "campaignName",
           "campaignId",
           "campaignStatus",
